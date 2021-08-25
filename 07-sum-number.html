@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function sumnumber(){
+            num1 = Number(document.getElementById('num1').value)
+            num2 = Number(document.getElementById('num2').value)
+            document.getElementById('output').innerHTML = num1 + num2
+        }
+    </script>
+    <title>07-Sum-Number</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    <br><br>
+    <input type="text" id="num2">
+    <br><br>
+    <input type="button" value="Submit" onclick="sumnumber()">
+    <br><br>
+    <p id="output"></p>
+</body>
+</html>
