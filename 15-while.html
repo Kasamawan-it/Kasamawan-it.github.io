@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let i = 0
+        let n
+        function loophello(){
+            document.getElementById('output').innerHTML = ''
+            n = parseInt(document.getElementById('num').value)
+            while (i < n){
+                document.getElementById('output').innerHTML += 'Hello <br>'
+                i++
+            }
+            
+        }
+        
+    </script>
+    <title>15-while</title>
+</head>
+<body>
+    Input Number : <input type="text" name="" id="num">
+    <br><br>
+    <input type="submit" value="Submit" onclick="loophello()">
+    <br><br>
+    <p id="output"></p>
+    <br>
+</body>
+</html>
