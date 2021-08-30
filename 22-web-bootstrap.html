@@ -9,19 +9,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
 
+    
+
     <style>
-      .jumbotron-fluid {
-        background-image: url(https://t4.ftcdn.net/jpg/02/76/08/07/360_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg);
-        color: #fff;
-      }
       body{
         font-family: Charm;
+        
       }
+      .jumbotron {
+            position: relative;
+            overflow: hidden;
+            background-color: black;
+            color: white;
+        }
+
+        video {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /*  object-fit is not supported on IE  */
+            object-fit: cover;
+            /* opacity: 0.5; */
+        }
+
+        .container {
+            z-index: 2;
+            position: relative;
+        }
     </style>
     <title>22-web-bootstrap</title>
 </head>
 <body>
   <div class="jumbotron jumbotron-fluid mb-0">
+    <video src="https://cdn.videvo.net/videvo_files/video/free/2021-04/large_watermarked/210329_06B_Bali_1080p_005_preview.mp4" autoplay loop muted></video>
     <div class="container">
       <h1 class="display-3">Kasamawan Chaiwongfan</h1>
       <p class="lead">63309010032</p>
@@ -88,7 +110,7 @@
                 <div class="card" style="width: 18rem;">
                     <img src="https://griffithmedicalcentre.com.au/wp-content/uploads/2016/08/cropped-header-background.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <h4 class="card-title">บันทึกข้อมูลนักเรียน</h4>
                       <div class="form-group">
                         <label for="">รหัสนักศึกษา</label>
                         <input type="text" name="" id="sid" class="form-control" placeholder="" aria-describedby="helpId">
@@ -101,7 +123,8 @@
                       </div>
                       <!--<p class="card-text">รหัสนักศึกษา</p>
                       <p class="card-text">ชื่อ-นามสกุล</p> -->
-                      <a href="#" class="btn btn-primary" style="background-color: navy; font-family: 'Open Sans', sans-serif;">Go somewhere</a>
+                      <button type="submit" class="btn btn-primary" style="background-color: navy; font-family: 'Open Sans', sans-serif;" onclick="display_data()">Submit</button>
+                      <!--<a href="#" class="btn btn-primary" style="background-color: navy; font-family: 'Open Sans', sans-serif;">Go somewhere</a>-->
                     </div>
                   </div>
             </div>
@@ -109,16 +132,30 @@
                 <div class="card" style="width: 18rem;">
                     <img src="https://griffithmedicalcentre.com.au/wp-content/uploads/2016/08/cropped-header-background.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary" style="background-color: navy; font-family: 'Open Sans', sans-serif;">Go somewhere</a>
+                      <h4 class="card-title">ผลลัพธ์</h4>
+                      <p class="card-text" id="output"></p>
+                      <!-- <a href="#" class="btn btn-primary" style="background-color: navy; font-family: 'Open Sans', sans-serif;">Go somewhere</a> -->
                     </div>
                   </div>
             </div>
-          </div>>
+          </div>
       </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <script>
+      let sid
+      let name
+      function display_data(){
+        sid = document.getElementById('sid').value
+        name = document.getElementById('sname').value
+
+        document.getElementById('output').innerHTML = "รหัสนักศึกษา : " + sid + "<br>" + "ชื่อ-นามสกุล : " + name
+        document.getElementById('sid').value = ''
+        document.getElementById('sname').value = ''
+      }
+    </script>
+
 </body>
 </html>
