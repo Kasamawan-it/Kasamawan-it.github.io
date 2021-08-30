@@ -1,0 +1,42 @@
+body {
+    background-color: #cceeff;
+}
+video {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*  object-fit is not supported on IE  */
+    object-fit: cover;
+    /* opacity: 0.5; */
+}
+nav {
+    background-color:#7990A7;
+    font-family: Sriracha;
+    
+}
+.btn {
+    background-color: #91CFE5;
+    color: black;
+    font-family: Sriracha;
+}
+.card {
+font-family: Charm;
+width: 18rem;
+border: 1px solid #fff;
+}
+.card-body {
+    background-color: #ccffe6;
+}
+.jumbotron {
+    font-family: Krub;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+.container {
+    z-index: 2;
+    position: relative;
+}
