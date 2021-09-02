@@ -12,18 +12,28 @@
     <!-- ฟอนต์ตัวอักษร ชลบุรี พัทยา ศรีราชา  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Pattaya&family=Sriracha&family=Kanit&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Pattaya&family=Sriracha&family=Kanit&display=swap"rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> <!-- font-family: 'Bebas Neue', cursive; -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet"> <!-- font-family: 'Caveat', cursive; -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">   <!-- font-family: 'Hammersmith One', sans-serif; -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet"> <!-- font-family: 'Pathway Gothic One', sans-serif; -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet"> <!-- font-family: 'Prompt', sans-serif; -->
 
     <style>
         body {
-            font-family: 'Pattaya', sans-serif;
-            background-color: lavenderblush;
+            background-color: whitesmoke;
+            
         }
 
         footer {
-            font-family: 'Kanit', sans-serif;
-            background-color: #99CCFF ;
+            font-family: 'Caveat', cursive;
+            background-color: #99CCFF;
+            font-size: 20px;
         }
 
         video {
@@ -46,16 +56,30 @@
         .container {
             z-index: 2;
             position: relative;
+            font-family: 'Bebas Neue', cursive;
         }
 
         .navbar {
             background-color: #99CCFF;
-            font-family: 'Chonburi', cursive;
+            font-family: 'Hammersmith One', sans-serif;
         }
-        .p1{
+
+        .card-title {
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .card-text { 
+            font-family: 'Pathway Gothic One', sans-serif;
+        }
+
+        .card-body {
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .text-md-center {
             background-color: #ccffe6;
+            color: #99CCFF;
         }
-        
 
  
     </style>
@@ -64,14 +88,14 @@
 
 <body>
     <div class="jumbotron jumbotron-fluid mb-0"
-        style="background-image: url(https://www.appliedimage.com/wp-content/uploads/2013/10/header-background.png); background-size: cover;">
+        style="background-image: url(https://wallpapermemory.com/uploads/201/mountain-wallpaper-full-hd-176622.jpg); background-size: cover;">
 
         <video
             src="https://cdn.videvo.net/videvo_files/video/free/2020-05/large_watermarked/3d_ocean_1590675653_preview.mp4"
             autoplay loop muted></video>
 
         <div class="container text-light">
-            <h1 class="display-3">Kasamawan Website</h1>
+            <h1 class="display-3">Kasamawan</h1>
             <p class="lead">63309010032</p>
         </div>
     </div>
@@ -102,7 +126,10 @@
                     <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="24-set-local-storage.html">Page-24</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="25-get-local-storage.html">Page-25</a>
                 </li>
             </ul>
         </div>
@@ -111,27 +138,26 @@
     <div class="container p-5">
         <div class="d-flex justify-content-center">
             <div class="card" style="width: 30rem;">
-                <img src="https://www.appliedimage.com/wp-content/uploads/2014/02/Header-background.jpg"
+                <img src="https://th.bing.com/th/id/R.37f9658b11e6b5a935903e05268a79e5?rik=wOyKF2Xg8AhT7w&riu=http%3a%2f%2fwww.bio-shine.com%2fwp-content%2fuploads%2f2017%2f03%2fheader-sky.jpg&ehk=EaW%2f3lIzJsB6Zp8It5CgMVM1vyfyPVp1MG9toF2eHKs%3d&risl=&pid=ImgRaw&r=0"
                     class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">บันทึกข้อมูลพนักงาน</h5>
-                    <p class="card-text">
-                        <div class="form-group">
-                          <label for="">รหัสพนักงาน</label>
-                          <input type="text" class="form-control" name="" id="empid" aria-describedby="helpId" placeholder="">
-                          <small id="helpId" class="form-text text-muted"></small>
-                        </div>
+                        <p class="card-text"> 
+                            <div class="form-group">
+                                <label for="">รหัสพนักงาน</label>
+                                <input type="text" class="form-control" name="" id="empid" aria-describedby="helpId" placeholder="">
+                                <small id="helpId" class="form-text text-muted"></small>
+                            </div>
 
-                        <div class="form-group">
-                          <label for="">ชื่อ-นามสกุล พนักงาน</label>
-                          <input type="text" class="form-control" name="" id="empname" aria-describedby="helpId" placeholder="">
-                          <small id="helpId" class="form-text text-muted"></small>
-                        </div>
-                        <input type="submit" value="Submit" class="btn btn-primary w-20" onclick="setdata()">
-                        <input type="reset" value="Reset" class="btn btn-primary w-20">
-                    </p>
- 
- 
+                            <div class="form-group">
+                                <label for="">ชื่อพนักงาน</label>
+                                <input type="text" class="form-control" name="" id="empname" aria-describedby="helpId" placeholder="">
+                                <small id="helpId" class="form-text text-muted"></small>
+                            </div>
+                                <input class="btn btn-primary w-25" type="submit" value="Submit" onclick="setdata()">
+                                <input class="btn btn-primary w-25" type="reset" value="Reset" onclick="resetdata()">
+                                <input class="btn btn-danger w-25" type="button" value="Delete" onclick="deletestorage()">
+                        </p>
                 </div>
             </div>
         </div>
@@ -141,7 +167,11 @@
     <footer class="fixed-bottom">
  
             <p class="text-center my-0 p-2 text-light"></p>
-            <p class="text-md-center my-0 p-2 text-dark p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad commodi quos tenetur voluptas excepturi accusantium. Mollitia qui quis minus molestias velit sapiente cum odio sint voluptate, nostrum fugit nesciunt voluptates.</p>
+            <p class="text-md-center my-0 p-2 text-dark"> 
+                <b>
+                    Lorem
+                </b>
+            </p>
             
 
     </footer>
@@ -155,18 +185,47 @@
 
         <!-- จาวาสคริป -->
     <script>
-        
-        let empid 
+        let local_employee = localStorage.getItem('employee')
+        let empid
         let empname
-        function setdata() {}{
+        let employee = []
+        
+    
+        function setdata() {
+            employee = eval(local_employee)
             empid = document.getElementById('empid').value
             empname = document.getElementById('empname').value
+            if (empid != '' && empname != '') {
+                if (employee == null){
+                    employee = [{"empid" : empid,"empname" : empname}]
+                } else {
+                    employee.push({"empid" : empid,"empname" : empname})
+                }
+                alert("บันข้อมูลเรียบร้อยแล้ว")
+            }else {
+                alert("ป้อนข้อมูลด้วย")
+            }
+        
+            localStorage.setItem('employee',JSON.stringify(employee))
+            local_employee = localStorage.getItem('employee')
 
-            console.log(empid + ' ' + empname)
+            document.getElementById("empid").value = ''
+            document.getElementById("empname").value = ''
+        }
+        
+        function resetdata() {
+            document.getElementById("empid").value = ''
+            document.getElementById("empname").value = ''
+        }
 
-            document.getElementById('empid').value = ''
-            document.getElementById('empname').value = ''
-
+        function deletestorage(){
+            if (confirm("ต้องการลบ Storage หรือไม่")) {
+                localStorage.removeItem('employee')
+                employee = []
+                local_employee = null
+            }
+            
+            
         }
 
     </script>
