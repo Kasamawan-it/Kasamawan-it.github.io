@@ -126,7 +126,10 @@
                     <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="24-set-local-storage.html">Page-24</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="25-get-local-storage.html">Page-25</a>
                 </li>
             </ul>
         </div>
@@ -139,9 +142,26 @@
                     class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">แสดงข้อมูลพนักงาน</h5>
-                        <p class="card-text" id="output"> 
-                            
+                        <p class="card-text text-center" id="output"> 
                         </p>
+                        <table class="table table-bordered table-info table-striped" id="emp_table">
+                            <thead class="bg-primary text-white text-center">
+                                <tr>
+                                    <th>รหัสพนักงาน</th>
+                                    <th>ชื่อพนักงาน</th>                               
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <!-- <tr>
+                                    <td scope="row"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row"></td>
+                                    <td></td>
+                                </tr> -->
+                            </tbody>
+                        </table>
                 </div>
             </div>
         </div>
@@ -171,16 +191,31 @@
     <script>
         let employee
         let emp = []
+        let emp_tb
+        let row 
+        let cell1
+        let cell2
 
         function get_employee(){
-            //document.getElementById('output').innerHTML = "Hello"
             employee = localStorage.getItem('employee')
             emp = eval(employee)
-            // document.getElementById('output').innerHTML = employee + '<br>'
-            // document.getElementById('output').innerHTML += emp
-            for(let i of emp){
-                document.getElementById('output').innerHTML += i.empid + ' ' + i.empname + '<br>'
+            emp_tb = document.getElementById('emp_table').getElementsByTagName('tbody')[0]
+
+            if(emp != null){
+                for(let i of emp){
+                row = emp_tb.insertRow()
+                cell1 = row.insertCell()
+                cell2 = row.insertCell()
+
+                cell1.innerHTML = i.empid
+                cell2.innerHTML = i.empname
+                //document.getElementById('output').innerHTML += i.empid + ' ' + i.empname + '<br>'
+                }
+            } else {
+                document.getElementById('output').innerHTML = 'ไม่พบข้อมูลพนักงาน'
             }
+
+            
             
             
         }
